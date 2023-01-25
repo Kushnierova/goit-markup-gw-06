@@ -489,6 +489,7 @@ address {
   transform: translate(-50%, -50%);
   width: 408px;
   height: 576px;
+  padding: 72px 24px 24px;
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -523,6 +524,90 @@ address {
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--main-white);
+}
+/* =================================== MODAL-FORM ===================================*/
+.modal-call {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.modal-form {
+  flex-direction: column;
+}
+.modal-form-input-wrapper{
+  position: relative;
+}
+.modal-form-icon{
+position: absolute;
+top: 50%;
+left: 19px;
+transform: translateY(-50%);
+}
+.modal-form-field {
+  display: block;
+  margin-bottom: 8px;
+}
+.modal-form-input-desc {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+
+  padding-bottom: 4px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-form-input:focus,
+.modal-form-input:hover {
+  border: 1px solid var(--btn-background-color);
+  border-radius: 4px;
+}
+.modal-form-input:focus .modal-form-icon,
+.modal-form-input:hover .modal-form-icon{
+fill: var(--btn-background-color);
+}
+
+.modal-form-field-massage{
+  margin-bottom: 16px;
+}
+.modal-form-massage {
+  width: 100%;
+  height: 120px;
+  padding-left: 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form-massage:focus,
+.modal-form-massage:hover {
+  border: 1px solid var(--btn-background-color);
+  border-radius: 4px;
+}
+.modal-form-check {
+}
+.modal-form-check-desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.modal-form-submit {
 }
 
 /* =================================== /MODAL-WINDOW ===================================*/
