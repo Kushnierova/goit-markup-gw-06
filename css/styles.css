@@ -10,7 +10,7 @@
   --text-font: Roboto, sans-serif;
 
   /* transition */
-  --duration: 5000ms;
+  --duration: 2000ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -83,11 +83,6 @@ body {
 
 /* =================================== COMPONENTS ===================================*/
 
-.section-description-theme-dark {
-  color: #e7e9fc;
-  margin-top: 16px;
-  /* Used only in FOOTER */
-}
 .section-description-theme-light {
   color: #434455;
 }
@@ -435,6 +430,12 @@ address {
 .footer {
   background-color: var(--accent-color);
 }
+.section-description-theme-dark {
+  font-weight: 400;
+  color: #e7e9fc;
+  margin-top: 16px;
+  min-width: ;
+}
 
 .footer-social-media {
   margin-left: 120px;
@@ -446,7 +447,6 @@ address {
 
 .social-list-link-footer {
   background-color: rgba(255, 255, 255, 0.1);
-
   transition: background-color var(--duration) var(--timing-function);
 }
 .social-list-icon-footer {
@@ -458,6 +458,62 @@ address {
   background-color: #31d0aa;
 }
 
+.footer-subscribe {
+  margin-left: 80px;
+}
+.subscribe-form-field {
+}
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+}
+.subscribe-form {
+  display: flex;
+}
+.subscribe-form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-button {
+  padding: 8px 64px 8px 24px;
+  margin-left: 24px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--main-white);
+
+  background: var(--btn-background-color);
+  border-radius: 4px;
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background: var(--focus-hover-color);
+}
+.icon-send {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+}
+
+.send-wrapper {
+  position: relative;
+}
 /* =================================== /FOOTER ===================================*/
 
 /* =================================== MODAL-WINDOW ===================================*/
@@ -616,6 +672,9 @@ address {
   color: #757575;
 
   margin-bottom: 24px;
+
+  /* transition: background-color var(--duration) var(--timing-function),
+  background-image var(--duration) var(--timing-function); */
 }
 .modal-form-check-desc::before {
   display: block;
@@ -630,18 +689,9 @@ address {
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: var(--focus-hover-color);
   border: 1.25px solid var(--focus-hover-color);
-}
-.modal-form-check:focus + .modal-form-check-desc::before {
-  background-color: var(--focus-hover-color);
-  border: 1.25px solid var(--focus-hover-color);
-}
-
-.icon-check {
-display: flex;
-
-
   background-image: url(../images/check.svg);
-  transition: background-image var(--animetion-transition);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .modal-form-submit {
